@@ -111,11 +111,11 @@ strong
 header
 {
     background-color: #f8f8f8;
-    padding: 3em 0 0.5em 0;
+    padding: 1em 0 0em 0;
     text-align: center;
     margin-bottom: 2em;
     position: sticky;
-    top: -2em;
+    top: -1em;
 }
 
 .container
@@ -209,7 +209,7 @@ button:hover
     .mobile-menu-icon
     {
         position: absolute;
-        top: 2em;
+        top: 1em;
         right: 1em;
         display: block;
     }
@@ -249,7 +249,7 @@ button:hover
     .mobile-menu-icon
     {
         position: absolute;
-        top: 2em;
+        top: 3em;
         right: 0.4em;
         display: block;
     }
@@ -260,7 +260,7 @@ button:hover
     .mobile-menu-icon
     {
         position: absolute;
-        top: 2em;
+        top: 3em;
         right: 0.2em;
         display: block;
     }
@@ -271,7 +271,7 @@ button:hover
     .mobile-menu-icon
     {
         position: absolute;
-        top: 5em;
+        top: 3em;
         right: 0.2em;
         display: block;
     }
@@ -415,7 +415,8 @@ footer
 {
     color: white;
     /* background-color: rgb(70, 67, 67); */
-    background-color: rgb(46, 44, 44);
+    /* background-color: rgb(46, 44, 44); */
+    background-color: #000000;
 }
 
 .darktheme h2,
@@ -426,7 +427,9 @@ footer
 
 .darktheme header
 {
-    background-color: #000000;
+    /* background-color: #000000; */
+    background-color: #1b1b1b;
+    border-bottom: 1px solid aqua;
 }
 
 .darktheme .link,
@@ -469,6 +472,7 @@ footer
 .darktheme footer
 {
     background-color: #000000;
+    border-top: 1px solid aqua;
 }
 
 .darktheme .icons
@@ -480,3 +484,95 @@ footer
 {
     color: white;
 }
+
+.darktheme .formstyle
+{
+    background-color: #000000;
+    color: aqua;
+    border: 1px solid aqua;
+}
+
+.darktheme .form-btn
+{
+    color: aqua;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.darktheme .form-btn:hover
+{
+    color: black;
+    background-color: white;
+}
+
+.darktheme .formstyle textarea,
+.darktheme .formstyle input
+{
+    background-color: #f4f0f0;
+}
+
+/* form */
+
+.formstyle
+{
+    color: black;
+    font-weight: 700;
+    background-color: #a1d7f4;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95%;
+    max-width: 700px;
+    height: 12rem;
+    margin: 1em auto 0 auto;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.form-content
+{
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.formstyle p
+{
+    text-align: center;
+}
+
+.formstyle textarea,
+.formstyle input
+{
+    background-color: #f4f0f0;
+}
+
+.form-btn
+{
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #000000;
+    margin-bottom: 1em;
+}
+
+.form-btn:hover
+{
+    color: black;
+    background-color: white;
+}
+
+@media (max-width: 600px)
+{
+    .form-content
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
