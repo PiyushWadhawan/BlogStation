@@ -20,8 +20,7 @@ function Form() {
     const handleMessage = (event) =>
     {
         setusername((prevform) => {
-            return { ...prevform, message: event.target.value}
-        })
+            return { ...prevform, message: event.target.value} })
     }
 
     const handleSubmit = (event) =>

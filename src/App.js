@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Recent from "./pages/Recent";
+import Blogform from "./pages/Blogform";
 import Footer from "./components/Footer";
 import { useState } from "react";
 
@@ -58,7 +59,13 @@ function App() {
   },
   ])
 
-  const [theme, settheme] = useState('dark')
+  const addBlog = (newBlog) => {
+    setContent((prevcontent) => {
+      return [ ...prevcontent, newBlog ]
+    })
+  }
+
+  const [theme, settheme] = useState('light')
 
   const darkmode = () =>
   {
@@ -77,6 +84,7 @@ function App() {
             <Route path="/" element={<Home content={content} about={about} sidebar={sidebar}/>} />
             <Route path="/about" element={<About content={content} about={about} sidebar={sidebar}/>} />
             <Route path="/recent-post" element={<Recent content={content} about={about} sidebar={sidebar}/>} />
+            <Route path="/blog-form" element={<Blogform addBlog={addBlog}/>} />
           </Routes>
         </div>
 
