@@ -4,7 +4,7 @@ import FeaturedArticle from '../components/FeaturedArticle'
 import RecentArticle from '../components/RecentArticle'
 import SidebarWidget from '../components/SidebarWidget'
 
-function Home({content, about, sidebar})
+function Home({content, about, sidebar, deleteBlog})
 {
     return (
       <div className='container container-flex'>
@@ -16,7 +16,7 @@ function Home({content, about, sidebar})
 
         
           {
-            content.filter(item => item.id>1).map((item) => <RecentArticle key={item.id} img={item.img} heading={item.heading} info={item.info} para={item.para} link={item.link}/>
+            content.filter(item => item.id>1).map((item) => <RecentArticle key={item.id} id={item.id} img={item.img} heading={item.heading} info={item.info} para={item.para} link={item.link} deleteBlog={deleteBlog} />
             )
           }
         

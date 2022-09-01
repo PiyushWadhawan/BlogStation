@@ -50,7 +50,7 @@ function Blogform({addBlog})
                 <label>Content</label>
                 <textarea type='text' value={para} onChange={(e) => setPara(e.target.value)}/>
 
-                <button type='submit' >Submit</button> 
+                <button type='submit' className='add-submit-btn' >Submit</button> 
 
             </div> 
         </form>

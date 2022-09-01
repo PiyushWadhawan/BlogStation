@@ -2,12 +2,12 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import RecentArticle from '../components/RecentArticle'
 
-function Recent({content, about, sidebar}) {
+function Recent({content, about, sidebar, deleteBlog}) {
   return (
     <div className='container container-flex'>
 
         <main role="main">
-          {content.map((item) => <RecentArticle key={item.id} img={item.img} heading={item.heading} info={item.info} para={item.para} link={item.link}/>)}
+          {content.map((item) => <RecentArticle key={item.id} id={item.id} img={item.img} heading={item.heading} info={item.info} para={item.para} link={item.link} deleteBlog={deleteBlog}/>)}
         </main>
 
         <aside className="sidebar">

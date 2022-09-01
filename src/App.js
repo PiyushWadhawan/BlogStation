@@ -65,6 +65,11 @@ function App() {
     })
   }
 
+  const deleteBlog = (id) =>{
+    const updatedContent = content.filter((item) => item.id!==id)
+    setContent(updatedContent)
+  }
+
   const [theme, settheme] = useState('light')
 
   const darkmode = () =>
@@ -81,9 +86,9 @@ function App() {
 
         <div>
           <Routes>
-            <Route path="/" element={<Home content={content} about={about} sidebar={sidebar}/>} />
+            <Route path="/" element={<Home content={content} about={about} sidebar={sidebar} deleteBlog={deleteBlog}/>} />
             <Route path="/about" element={<About content={content} about={about} sidebar={sidebar}/>} />
-            <Route path="/recent-post" element={<Recent content={content} about={about} sidebar={sidebar}/>} />
+            <Route path="/recent-post" element={<Recent content={content} about={about} sidebar={sidebar} deleteBlog={deleteBlog}/>} />
             <Route path="/blog-form" element={<Blogform addBlog={addBlog}/>} />
           </Routes>
         </div>
